@@ -1,0 +1,48 @@
+.card-lagu {
+    width: 300px;
+    padding: 20px;
+    margin: 15px;
+    border: 1px solid;
+    border-color: black;
+    text-align: center;
+    border-radius: 20px;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card-lagu .contoh-lagu {
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: left;
+}
+
+.card-lagu button{
+    background-color: aquamarine;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.card-lagu button:hover{
+    background-color: blue;
+}
+
+/*body{
+    background-image: url(band-nirvana.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+*/
+
+li::marker{
+    color: red;
+    font-size: 30px;
+}
+li::first-letter{
+    color: blue;
+    font-size: xx-large;
+}
+
+p::first-line{
+    color: greenyellow;
+}

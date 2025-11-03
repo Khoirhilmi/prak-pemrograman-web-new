@@ -1,0 +1,136 @@
+/* Reset dan box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body & scroll */
+body {
+    background-color: #f0f2f5;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Profil Section */
+#profile {
+    background-color: white;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #4CAF50;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #4CAF50;
+    object-fit: cover;
+}
+
+.profile-text h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.profile-text p {
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Section Umum */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 15px;
+    border: 2px solid #4CAF50;
+}
+
+section h2 {
+    font-size: 24px;
+    color: #4CAF50;
+    border-bottom: 2px solid #4CAF50;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Skill */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.skill::before {
+    content: "✓ "; /* pseudo-element */
+}
+
+/* Projek */
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.project {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.project h3 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Kontak */
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.contact-item {
+    display: inline-block;
+    text-decoration: none; /* hilangkan garis bawah link */
+    color: white;
+    background-color: #4CAF50;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect */
+.contact-item:hover {
+    background-color: #45a049; /* pseudo-class */
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}

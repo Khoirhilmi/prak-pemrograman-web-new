@@ -1,0 +1,137 @@
+/* Global reset-ish for predictable box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Tahap 3: wajib */
+}
+
+:root{
+  --gap: 20px;
+  --card-padding: 15px;
+  --bg: #0b0f14;
+  --card-bg: #0f1720;
+  --muted: #cbd5e1;
+  --accent-cyan: #00FFFF; /* cyan for priority normal */
+  --accent-magenta: #FF00FF; /* magenta on hover (Director's demand) */
+  --default-border: #555;
+}
+
+/* Body styling to make dashboard visible and modern */
+html,body{
+  height:100%;
+  margin:0;
+  font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,#061014 0%, #0b1220 100%);
+  color: var(--muted);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Tahap 2: mission-control sebagai grid 3 kolom */
+#mission-control{
+  display: grid; /* foundation */
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns using fr */
+  gap: var(--gap); /* 20px space */
+  padding: 28px;
+  max-width: 1200px;
+  margin: 36px auto;
+  align-items: start;
+}
+
+/* Tahap 3: asset-card flex internal */
+.asset-card{
+  position: relative; /* needed for ::after overlay absolute positioning */
+  display: flex; /* flex layout for internal content */
+  flex-direction: column; /* vertical stacking */
+  min-height: 200px; /* ensure enough space to see bottom aligned status */
+  padding: var(--card-padding); /* 15px per spec */
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12));
+  border-radius: 12px;
+  /* Protokol Standar: default border for all assets */
+  border: 2px solid var(--default-border);
+  box-shadow: 0 6px 18px rgba(2,6,12,0.6);
+  overflow: hidden; /* keep overlay contained */
+}
+
+/* Asset contents */
+.asset-card h3{
+  margin: 0 0 8px 0;
+  font-size: 1.05rem;
+  color: #e6f7ff;
+  letter-spacing: 0.2px;
+}
+
+.asset-card p{
+  margin: 0;
+  line-height: 1.4;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  /* allow paragraph to take multiple lines */
+}
+
+/* Ensure asset-status sticks to bottom regardless of description length */
+.asset-status{
+  margin-top: auto; /* <-- critical: pushes status to bottom in flex column */
+  padding-top: 12px;
+  font-weight: 600;
+  color: #dbeafe;
+  font-size: 0.9rem;
+}
+
+/* Tahap 5: Protocol Priority — priority alpha default cyan border */
+#priority-alpha.asset-card {
+  border: 2px solid var(--accent-cyan);
+}
+
+/* Tahap 4: overlay ::after */
+/* create overlay that covers whole card; hidden by default (opacity 0) */
+.asset-card::after{
+  content: "Buka Arsip Proyek";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: #0b0f14;
+  background: rgba(255,255,255,0.86); /* visible overlay color */
+  opacity: 0; /* default invisible */
+  transition: opacity 240ms ease, transform 240ms ease;
+  transform: translateY(6px);
+  pointer-events: none; /* overlay won't capture pointer; helps accessibility */
+  z-index: 5;
+}
+
+/* On hover show overlay smoothly */
+.asset-card:hover::after{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Director's demand: hovering any asset must change its border to magenta.
+   For regular assets, .asset-card:hover is enough. However #priority-alpha has higher specificity;
+   therefore also declare a selector that targets the element when it has both the ID and class and is hovered:
+   #priority-alpha.asset-card:hover
+   This combined selector has higher specificity than the plain ID and will win without !important.
+*/
+
+/* Regular hover (others) */
+.asset-card:hover{
+  border: 2px solid var(--accent-magenta);
+  transform: translateY(-3px);
+  transition: border-color 180ms ease, transform 180ms ease;
+}
+
+/* Explicit higher-specificity rule to ensure priority-alpha also changes to magenta on hover */
+#priority-alpha.asset-card:hover {
+  border: 2px solid var(--accent-magenta);
+}
+
+/* Small responsive tweak: switch to 1 column on narrow screens */
+@media (max-width: 800px){
+  #mission-control{
+    grid-template-columns: 1fr;
+  }
+}

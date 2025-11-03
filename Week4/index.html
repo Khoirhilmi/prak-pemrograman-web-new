@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
+        li {
+            color: pink;
+            font-size: larger;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bolder;
+            line-height: 2;
+        }p {
+            color: yellow
+        }
+
+        header {
+            background-image: url('myfoto.jpg');
+            opacity: 0.5;
+        }
+    </style> -->
+</head>
+<body>
+    <h1 style="color: rgb(4, 0, 255)">Hilmi</h1>
+        <!-- Navbar -->
+         <nav>
+            <ul>
+                <li> <a href = "Home.html" > Home </a> </li>
+                <li> <a href = "Artikel.html" > Artikel </a> </li>
+                <li> <a href = "Kontak.html" > Kontak Saya </a> </li>
+            </ul>
+         </nav>
+    </header>
+    <div class="card-lagu">
+        <h2 style="color:rgb(4, 0, 255)">Daftar Lagu</h2> 
+        <p class="contoh-lagu"></p>
+    </div>
+    <div class="lagu">
+        <p>Daftar <span class="highlight"> Lagu </span></p>
+        <ul>
+            <li>Lagu yali yali</li>
+            <li>Lagu niki</li>
+        </ul>
+        <audio src="mixue-By-Tuna.mp3" controls></audio>
+        <audio src="different-heaven-safe-and-sound-[ncs-release]-By-Tuna.mp3" controls></audio>
+        <p></p>
+        <video src="astonhall.mp4" controls width="400"></video>
+    </div>
+
+    <div id="contact">
+        <h2>Contact Me</h2>
+        <form action="">
+            <table border="1">
+                <tr>
+                    <td>
+            <label for="name">Name:</label>
+            </td>
+            <td>
+            <input type="text" id="name" name="name" required>
+            </td>
+                </tr>
+                <tr>
+                    <td>
+            <label for="Nim">Nim:</label>
+            </td>
+            <td>
+            <input type="number" id="nim" name="nim" required>
+            </td>
+            <tr>
+                <td>
+                    <label for = "jenis kelamin">Jenis Kelamin</label></td>
+            <td>
+            <input type = "radio" value = "Pria" > Pria
+            <br> <input type = "radio" value = "Wanita" > Wanita
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Hobi">Hobi</label>
+                </td>
+                <td>
+                    <input type = "checkbox" name="Hobi">hobi 1
+                    <input type = "checkbox" name="Hobi">hobi 2
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="prodi" > Prodi </label>
+                </td>
+                <td>
+                    <select name "prodi"
+                </td>
+            </tr>
+        </table>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; Copyright 2025 Raditya Rahmanda Putra</p>
+        <p>
+            <a href="/privacy"> Kebijakan Privasi </a>
+            <a href="/terms"> Syarat dan Ketentuan </a>
+            <a href="/contact"> Kontak </a>
+        </p>
+</body>
+</html>

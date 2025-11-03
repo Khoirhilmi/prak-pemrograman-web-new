@@ -1,0 +1,45 @@
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "article"
+    "footer";
+  grid-template-rows: auto 1fr auto; 
+  min-height: 100vh;
+  margin: 0;
+  gap: 10px; /* beri jarak antar bagian, tidak saling menempel */
+  font-family: Arial, sans-serif;
+}
+
+.page-header {
+  grid-area: header;
+  background-color: green; 
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.main-article {
+  grid-area: article;
+  background-color: gray;
+  padding: 20px; /* tidak menempel ke tepi */
+  line-height: 1.6;
+  text-align: justify;
+}
+
+#gambarartikel {
+  float: left;
+  margin: 0 15px 10px 0; /* jarak kanan dan bawah,teks tidak menempel */
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.page-footer {
+  grid-area: footer;
+  background-color: cyan;
+  text-align: center;
+  padding: 1rem;
+  font-style: italic;
+}
+
