@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Bootstrap</title>
+    <link rel="stylesheet" href="bootstrap-style.css">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+</head>
+
+<body class="bg-light">
+
+<div class="container py-5">
+
+    <!-- ======================= BAGIAN BIO ======================= -->
+    <section class="mb-5">
+        <div class="row align-items-center">
+            <!-- Foto -->
+            <div class="col-12 col-md-4">
+                <div class="card shadow-sm">
+                    <img src="images.jpeg" class="card-img-top rounded" alt="Foto Profil">
+                </div>
+            </div>
+
+            <!-- Teks Bio -->
+            <div class="col-12 col-md-8 mt-3 mt-md-0">
+                <h2 class="text-primary fw-bold">Khairul Hilmi Muswar</h2>
+                <p class="text-muted fs-5">Web Developer & UI/UX Enthusiast</p>
+
+                <p>
+                    Saya seorang mahasiswa yang berfokus pada pengembangan website responsif dan interaktif.
+                    Memiliki pengalaman dalam HTML, CSS, dan JavaScript. Senang menciptakan desain user-friendly
+                    dan terus belajar teknologi baru untuk meningkatkan portofolio pribadi.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================= BAGIAN GALERI / PROJEK ======================= -->
+    <section class="mb-5">
+        <h3 class="text-primary fw-bold mb-3">Galeri Proyek</h3>
+
+        <div class="row g-4">
+            <!-- 6 Card Galeri -->
+            <!-- Gunakan card bootstrap -->
+            <!-- Loop manual -->
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card shadow-sm">
+                    <img src="https://picsum.photos/400/250?random=1" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Website Company Profile</h5>
+                        <p class="card-text">Website profil perusahaan dengan HTML, CSS, dan JavaScript interaktif.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card shadow-sm">
+                    <img src="https://picsum.photos/400/250?random=2" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Portfolio Personal</h5>
+                        <p class="card-text">Website portofolio pribadi yang responsif dengan desain modern.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card shadow-sm">
+                    <img src="https://picsum.photos/400/250?random=3" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Web App To-Do List</h5>
+                        <p class="card-text">Aplikasi to-do list berbasis web dengan fitur CRUD sederhana.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tambah 3 placeholder lagi agar total 6 -->
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card shadow-sm">
+                    <img src="https://picsum.photos/400/250?random=4" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">UI/UX Design Mockup</h5>
+                        <p class="card-text">Mockup desain antarmuka menggunakan Figma dan prototyping tools.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card shadow-sm">
+                    <img src="https://picsum.photos/400/250?random=5" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Landing Page</h5>
+                        <p class="card-text">Landing page modern dengan elemen interaktif dan CTA jelas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4">
+                <div class="card shadow-sm">
+                    <img src="https://picsum.photos/400/250?random=6" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Dashboard Web</h5>
+                        <p class="card-text">Dashboard statistik dengan elemen chart dan table dinamis.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======================= BAGIAN KONTAK ======================= -->
+    <section class="mb-5">
+        <h3 class="text-primary fw-bold mb-3">Kontak</h3>
+
+        <div class="row">
+            <div class="col-12 col-md-6">
+
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label">Nama</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Pesan</label>
+                        <textarea class="form-control" rows="4"></textarea>
+                    </div>
+
+                    <button class="btn btn-primary">Kirim</button>
+                </form>
+
+            </div>
+
+            <div class="col-12 col-md-6 mt-4 mt-md-0">
+                <p>Email: <a href="mailto:khilmi925@gmail.com">khilmi925@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://id.linkedin.com/in/khairul-hilmi-muswar-64a2342a3" target="_blank">Khairul Hilmi M</a></p>
+                <p>GitHub: <a href="https://github.com/Khoirhilmi" target="_blank">Khoirhilmi</a></p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
