@@ -1,0 +1,203 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigasi */
+header {
+    background-color: #333;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #4c56af;
+}
+
+/* Section Umum */
+section {
+    background-color: white;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #4c56af;
+}
+
+/* Profil */
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #4c56af;
+    object-fit: cover;
+}
+
+.profile-text h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+.profile-text p {
+    color: #666;
+    margin-top: 5px;
+}
+
+/* Judul Section */
+section h2 {
+    font-size: 24px;
+    color: #4c56af;
+    border-bottom: 2px solid #4c56af;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Skill */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    background-color: #4c56af;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
+
+.skill::before {
+    content: "✓ ";
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+/* Projek */
+.project-list {
+    display: grid;
+    gap: 20px;
+}
+
+.project {
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Form Kontak */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input, textarea, button {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4c56af;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4c56af;
+}
+
+/* Kontak Link */
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.contact-item {
+    text-decoration: none;
+    color: white;
+    background-color: #4c56af;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.contact-item:hover {
+    background-color: #4c56af;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
